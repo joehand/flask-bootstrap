@@ -47,7 +47,7 @@
     {%- if config['BOOTSTRAP_JQUERY_VERSION'] %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{config['BOOTSTRAP_JQUERY_VERSION']}}/jquery.{% if config['BOOTSTRAP_USE_MINIFIED'] %}min.{% endif %}js"></script>
     {%- endif %}
-    <script src="{{'js/bootstrap.{% if config['BOOTSTRAP_USE_MINIFIED'] %}min.{% endif %}js'|bootstrap_find_resource}}"></script>
+    <script src="{{'js/bootstrap.js'|bootstrap_find_resource}}"></script>
     {%- endblock bootstrap_js_bottom %}
 
     {%- if config['BOOTSTRAP_GOOGLE_ANALYTICS_ACCOUNT'] %}
