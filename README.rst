@@ -3,7 +3,7 @@ Flask-Bootstrap
 ===============
 
 Flask-Bootstrap packages `Twitter's Bootstrap
-<http://twitter.github.com/bootstrap/>`_ into an extension that mostly consists
+<http://getbootstrap.com/>`_ into an extension that mostly consists
 of a blueprint named 'bootstrap'. It can also create links to serve Bootstrap
 from a CDN.
 
@@ -18,8 +18,7 @@ Here is an example::
 
   Bootstrap(app)
 
-This makes some new templates available, mainly ``bootstrap_base.html`` and
-``bootstrap_responsive.html``. These are blank pages that include all bootstrap
+This makes some new templates available, mainly ``bootstrap_base.html``. These are blank pages that include all bootstrap
 resources, and have predefined blocks where you can put your content. The core
 block to alter is ``body_content``, otherwise see the source of the template
 for more possiblities.
@@ -38,7 +37,7 @@ bootstrap base templates first and including the the macros there).
 
 An example "base.html"::
 
-  {% extends "bootstrap_responsive.html" %}
+  {% extends "bootstrap_base.html" %}
   {% import "bootstrap_wtf.html" as wtf %}
 
 Forms
@@ -54,9 +53,11 @@ quickly. The most basic way is using them as an aid to create a form by hand::
     {{ wtf.horizontal_field(form.field1) }}
     {{ wtf.horizontal_field(form.field2) }}
 
-    <div class="form-actions">
-       <button name="action_save" type="submit" class="btn btn-primary">Save changes</button>
-    </div>
+     <div class="form-group">
+        <div class="col-offset-2 col-lg-10">
+          <button name="action_save" type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
   </form>
 
 However, often you just want to get a form done quickly and have no need for
@@ -134,6 +135,13 @@ CHANGES
 ~~~~~~~
 
 The following changes could have possibly been not backwards compatible:
+
+3.0 RC1
+"""""""
+* New upstream release: 3.0 RC1.
+* Bootstrap 3 requires new HTML. This will likely break legacy sites.
+* This is currently just a release candidate, it is still very much in development.
+
 
 2.1.0-1
 """""""

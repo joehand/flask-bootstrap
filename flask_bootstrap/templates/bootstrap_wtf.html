@@ -1,14 +1,14 @@
 {%- macro inline_field(field) %}
 {%- with required = "required" if kwargs['required'] or field.flags.required else "" -%}
-{{field(placeholder=field.label.text, required=required, **kwargs)}}
+{{field(class="form-control", placeholder=field.label.text, required=required, **kwargs)}}
 {%- endwith %}
 {%- endmacro %}
 
 {%- macro horizontal_field(field) %}
-<div class="control-group {% if field.errors %}error{% endif %}">
-  {{field.label(class="control-label")}}
-  <div class="controls">
-    {{field(**kwargs)|safe}}
+<div class="form-group {% if field.errors %}error{% endif %}">
+  {{field.label(class="control-label col-lg-2")}}
+  <div class="col-lg-4">
+    {{field(class="form-control", **kwargs)|safe}}
 
     {%- if field.errors %}
       {%- for error in field.errors %}
@@ -43,10 +43,12 @@
   {{ horizontal_field(field) }}
   {%- endif %}
   {%- endfor %}
-  <div class="form-actions">
-  {% for name, type, text in buttons %}
-    <button name="{{name}}" type="submit" class="btn btn-{{type}}">{{text}}</button>
-  {%- endfor %}
+  <div class="form-group">
+    <div class="col-offset-2 col-lg-10">
+    {% for name, type, text in buttons %}
+      <button name="{{name}}" type="submit" class="btn btn-{{type}}">{{text}}</button>
+    {%- endfor %}
+    </div>
   </div>
 </form>
 {%- endmacro %}
