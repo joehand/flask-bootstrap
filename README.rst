@@ -136,6 +136,11 @@ CHANGES
 
 The following changes could have possibly been not backwards compatible:
 
+3.0 RC2
+"""""""
+* New upstream release: 3.0 RC2.
+
+
 3.0 RC1
 """""""
 * New upstream release: 3.0 RC1.

@@ -6,8 +6,8 @@
 
 {%- macro horizontal_field(field) %}
 <div class="form-group {% if field.errors %}error{% endif %}">
-  {{field.label(class="control-label col-lg-2")}}
-  <div class="col-lg-4">
+  {{field.label(class="control-label col-lg-2 col-md-2")}}
+  <div class="col-lg-4 col-md-4">
     {{field(class="form-control", **kwargs)|safe}}
 
     {%- if field.errors %}
@@ -44,7 +44,7 @@
   {%- endif %}
   {%- endfor %}
   <div class="form-group">
-    <div class="col-offset-2 col-lg-10">
+    <div class="col-offset-2 col-lg-10 col-md-10">
     {% for name, type, text in buttons %}
       <button name="{{name}}" type="submit" class="btn btn-{{type}}">{{text}}</button>
     {%- endfor %}

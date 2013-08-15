@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding=utf8
 
-__version__ = '3.0.0.rc1'
+__version__ = '3.0.0.rc2'
 
 from flask import Blueprint, current_app, url_for
 
@@ -55,9 +55,9 @@ class Bootstrap(object):
         app.config.setdefault(
             'BOOTSTRAP_CDN_BASEURL', {
                 'bootstrap':   '//cdnjs.cloudflare.com/ajax/libs'
-                               '/twitter-bootstrap/3.0.0-rc1/',
+                               '/twitter-bootstrap/3.0.0-rc2/',
                 'fontawesome': '//cdnjs.cloudflare.com/ajax/libs'
-                               '/font-awesome/3.0.2/',
+                               '/font-awesome/3.2.1/',
             }
         )
 
