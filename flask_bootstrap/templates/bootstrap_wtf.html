@@ -5,7 +5,7 @@
 {%- endmacro %}
 
 {%- macro horizontal_field(field) %}
-<div class="form-group {% if field.errors %}error{% endif %}">
+<div class="form-group {% if field.errors %}has-error{% endif %}">
   {{field.label(class="control-label col-lg-2 col-md-2")}}
   <div class="col-lg-4 col-md-4">
     {{field(class="form-control", **kwargs)|safe}}
