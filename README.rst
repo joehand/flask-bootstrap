@@ -136,17 +136,10 @@ CHANGES
 
 The following changes could have possibly been not backwards compatible:
 
-3.0 RC2
+3.0
 """""""
-* New upstream release: 3.0 RC2.
-
-
-3.0 RC1
-"""""""
-* New upstream release: 3.0 RC1.
+* New upstream release: 3.0.
 * Bootstrap 3 requires new HTML. This will likely break legacy sites.
-* This is currently just a release candidate, it is still very much in development.
-
 
 2.1.0-1
 """""""
